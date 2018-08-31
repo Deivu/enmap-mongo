@@ -80,7 +80,7 @@ class EnmapProvider {
   }
 
   hasAsync(key) {
-    return this.db.find({ _id: key }).limit(1);
+    return this.db.findOne({ _id: key });
   }
 
   /**
