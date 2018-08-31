@@ -76,7 +76,7 @@ class EnmapProvider {
    * @param {boolean} bulk Internal property used by the purge method.
    */
   delete(key) {
-    return this.db.remove({ _id: key }, { single: true });
+    return this.db.deleteOne({ _id: key });
   }
 
   hasAsync(key) {
